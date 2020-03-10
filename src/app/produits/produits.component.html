@@ -20,7 +20,7 @@
           </tbody>  
           </table>
           <ul class="pagination"  *ngIf="pages">
-            <li class="page-item"><a class="page-link" (click)="onLastPage()">Précidente</a></li>
+            <li class="page-item"><a class="page-link" (click)="onLastPage()">Précédente</a></li>
               <li class="page-item" [ngClass]="i==page?'active':''" *ngFor="let p of pages; let i=index">
                 <a class="page-link" (click)="onPageProducts(i)">{{i+1}}</a>
               </li>
