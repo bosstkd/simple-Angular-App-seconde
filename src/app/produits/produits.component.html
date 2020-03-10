@@ -7,6 +7,11 @@
           <button class="btn btn-primary" (click) = "onGetProducts()">Produits</button>
         </div>
         <div class="card-body">
+          <form #f="ngForm" (ngSubmit)="onChercher(f.value)" class="form-inline">
+            <label for="search" class="mr-sm-2">Recherche:</label>
+            <input type="text" name="searchWord" ngModel class="form-control" placeholder="Search word" id="search">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
           <table *ngIf="prd; else noPrd" class="table table-striped">
             <thead>
             <tr>

@@ -18,5 +18,8 @@ export class CatalogueService {
     return this.httpClient.get(this.host+"/produits");
    }
 
+   findByDesign(searchWord:string ,page:number, size:number){
+    return this.httpClient.get(this.host+"/produits/search/byDesigContains?mc="+searchWord+"&page="+page+"&size="+size);
+   }
    
 }
