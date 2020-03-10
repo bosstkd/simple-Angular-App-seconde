@@ -1,0 +1,39 @@
+  <div class="container">
+   
+    <div class="card card-primary">
+      <div class="card-heading">
+        <div class="card-header">Liste des produits</div>
+        <div class="card-body">
+          <button class="btn btn-primary" (click) = "onGetProducts()">Produits</button>
+        </div>
+        <div class="card-body">
+          <table *ngIf="prd; else noPrd" class="table table-striped">
+            <thead>
+            <tr>
+              <th>ID</th><th>DES</th><th>PRIX</th><th>QTE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of prd._embedded.produits">
+               <td>{{p.id}}</td><td>{{p.desig}}</td><td>{{p.prix | number:'0.2'}}</td><td>{{p.qte}}</td>
+            </tr>
+          </tbody>  
+          </table>
+          <ul class="pagination"  *ngIf="pages">
+            <li class="page-item"><a class="page-link" (click)="onLastPage()">Précidente</a></li>
+              <li class="page-item" [ngClass]="i==page?'active':''" *ngFor="let p of pages; let i=index">
+                <a class="page-link" (click)="onPageProducts(i)">{{i+1}}</a>
+              </li>
+            <li class="page-item"><a class="page-link" (click)="onNextPage()">Suivante</a></li>
+          </ul> 
+        </div>
+         
+
+          <ng-template #noPrd>
+            <p>Aucun produit</p>
+          </ng-template>
+       
+      </div>
+    </div>
+    
+  </div>
