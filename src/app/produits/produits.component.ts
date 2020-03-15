@@ -62,14 +62,36 @@ export class ProduitsComponent implements OnInit {
   }
 
   onChercher(data:any){
+    this.page = 0;
     this.motCleRecherche = data.searchWord;
     this.cs.findByDesign(data.searchWord,this.page, this.size).subscribe(data=>{
       this.pages = new Array<number>(data["page"].totalPages);
       this.prd=data;
     },err=>{
         console.log(err);
-      })
+      });
+      
   }
-  
+   
+  deleteProduit(p){
+
+    let conf=confirm("Etes vous sure de vouloir supprimer "+p.desig+" !?");
+
+      if(conf == true){
+                this.cs.deletePrdById(p.id).subscribe(data=>{
+                                                              if(this.motCleRecherche.length<1){
+                                                                this.onGetProducts();
+                                                              }else{
+                                                                this.onChercher({searchWord:this.motCleRecherche});
+                                                              }
+                                                            console.log(data);
+                                                          },
+                                                          err=>{
+                                                            console.log(err);
+                                                          });
+
+      }
+    
+  }
 
 }

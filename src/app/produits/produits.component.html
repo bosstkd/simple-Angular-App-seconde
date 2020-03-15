@@ -10,7 +10,10 @@
           <form #f="ngForm" (ngSubmit)="onChercher(f.value)" class="form-inline">
             <label for="search" class="mr-sm-2">Recherche:</label>
             <input type="text" name="searchWord" ngModel class="form-control" placeholder="Search word" id="search">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa fa-search"></i>
+              Chercher
+            </button>
           </form>
           <table *ngIf="prd; else noPrd" class="table table-striped">
             <thead>
@@ -20,7 +23,11 @@
           </thead>
           <tbody>
             <tr *ngFor="let p of prd._embedded.produits">
-               <td>{{p.id}}</td><td>{{p.desig}}</td><td>{{p.prix | number:'0.2'}}</td><td>{{p.qte}}</td>
+               <td>{{p.id}}</td>
+               <td>{{p.desig}}</td>
+               <td>{{p.prix | number:'0.2'}}</td>
+               <td>{{p.qte}}</td>
+               <td><button (click) = "deleteProduit(p)" class="btn btn-danger">Supprimer</button> </td>
             </tr>
           </tbody>  
           </table>
