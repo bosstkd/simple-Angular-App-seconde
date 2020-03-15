@@ -1,5 +1,6 @@
   <div class="container">
-   
+    <div class="col-md-12 col-sm-12 col-xs-12">
+
     <div class="card card-primary">
       <div class="card-heading">
         <div class="card-header">Liste des produits</div>
@@ -15,7 +16,7 @@
               Chercher
             </button>
           </form>
-          <table *ngIf="prd; else noPrd" class="table table-striped">
+          <table *ngIf="prd; else noPrd" class="table table-striped" >
             <thead>
             <tr>
               <th>ID</th><th>DES</th><th>PRIX</th><th>QTE</th>
@@ -47,5 +48,5 @@
        
       </div>
     </div>
-    
+  </div>
   </div>

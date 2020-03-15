@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CatalogueService } from '../services/catalogue.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-ajouter',
   templateUrl: './ajouter.component.html',
@@ -11,21 +12,26 @@ export class AjouterComponent implements OnInit {
   prd:any;
   cols: any[];
 
-  constructor(private cs:CatalogueService) { }
+  constructor(private cs:CatalogueService, private router:Router) { }
 
-  ngOnInit() {
-    this.cs.findAllProductNotPaged().subscribe(data=>{
-      this.prd=data;
-    },err=>{
-        console.log(err);
-      })  
-    
-      this.cols = [
-        { field: 'ID', header: 'ID' },
-        { field: 'DES', header: 'DES' },
-        { field: 'PRIX', header: 'PRIX' },
-        { field: 'QTE', header: 'QTE' }
-    ];
-      
+  ngOnInit() { }
+
+  onSaveProduit(prd){
+
+    this.cs.insertProduit(prd).subscribe(data=>{
+      console.log(data["desig"]);
+      this.router.navigateByUrl("/produits");
+      /*
+      if(prd.desig == data["desig"]){
+        
+      }
+      */
+    },
+      err=> {
+        console.log(err) 
+      }
+      );
   }
+
+
 }

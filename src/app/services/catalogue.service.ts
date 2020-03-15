@@ -26,4 +26,8 @@ export class CatalogueService {
      return this.httpClient.delete(this.host+"/prdSupprimer/"+id);
    }
    
+   insertProduit(produit){
+      return this.httpClient.post(this.host+"/prdInsert", produit);
+   }
+
 }
