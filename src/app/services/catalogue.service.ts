@@ -22,6 +22,10 @@ export class CatalogueService {
     return this.httpClient.get(this.host+"/produits/search/byDesigContains?mc="+searchWord+"&page="+page+"&size="+size);
    }
 
+   findById(id){
+    return this.httpClient.get(this.host+"/produits/"+id);
+   }
+
    deletePrdById(id:string){
      return this.httpClient.delete(this.host+"/prdSupprimer/"+id);
    }
@@ -29,5 +33,9 @@ export class CatalogueService {
    insertProduit(produit){
       return this.httpClient.post(this.host+"/prdInsert", produit);
    }
+
+   majProduit(produit, id){
+    return this.httpClient.put(this.host+"/prdUpdate/"+id, produit);
+ }
 
 }

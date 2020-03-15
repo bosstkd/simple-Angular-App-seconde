@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProduitsComponent } from './produits/produits.component';
 import { AjouterComponent } from './ajouter/ajouter.component';
+import { EditProduiComponent } from './edit-produi/edit-produi.component';
 
 const routes: Routes = [
   {
@@ -11,8 +12,12 @@ const routes: Routes = [
     path:"ajouter", component: AjouterComponent
   },
   {
+    path:"editer/:id", component: EditProduiComponent
+  },
+  {
     path:"", redirectTo:"/produits", pathMatch:"full"
-  }
+  },
+  
 ];
 
 @NgModule({

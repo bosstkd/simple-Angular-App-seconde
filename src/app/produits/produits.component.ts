@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CatalogueService } from '../services/catalogue.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-produits',
   templateUrl: './produits.component.html',
@@ -14,7 +15,7 @@ export class ProduitsComponent implements OnInit {
   motCleRecherche:string;
 
 
-  constructor(private cs:CatalogueService) { }
+  constructor(private cs:CatalogueService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -74,9 +75,7 @@ export class ProduitsComponent implements OnInit {
   }
    
   deleteProduit(p){
-
     let conf=confirm("Etes vous sure de vouloir supprimer "+p.desig+" !?");
-
       if(conf == true){
                 this.cs.deletePrdById(p.id).subscribe(data=>{
                                                               if(this.motCleRecherche.length<1){
@@ -89,9 +88,11 @@ export class ProduitsComponent implements OnInit {
                                                           err=>{
                                                             console.log(err);
                                                           });
-
       }
-    
+  }
+
+  editerProduit(p){
+    this.router.navigateByUrl("/editer/"+btoa(p.id));
   }
 
 }

@@ -19,7 +19,7 @@
           <table *ngIf="prd; else noPrd" class="table table-striped" >
             <thead>
             <tr>
-              <th>ID</th><th>DES</th><th>PRIX</th><th>QTE</th>
+              <th>ID</th><th>DESIG</th><th>PRIX</th><th>QTE</th>
             </tr>
           </thead>
           <tbody>
@@ -29,6 +29,7 @@
                <td>{{p.prix | number:'0.2'}}</td>
                <td>{{p.qte}}</td>
                <td><button (click) = "deleteProduit(p)" class="btn btn-danger">Supprimer</button> </td>
+               <td><button (click) = "editerProduit(p)" class="btn btn-success">Maj</button> </td>
             </tr>
           </tbody>  
           </table>
