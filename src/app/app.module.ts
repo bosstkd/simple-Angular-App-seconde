@@ -9,6 +9,8 @@ import { ProduitsComponent } from './produits/produits.component';
 import { AjouterComponent } from './ajouter/ajouter.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EditProduiComponent } from './edit-produi/edit-produi.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { EditProduiComponent } from './edit-produi/edit-produi.component';
     ProduitsComponent,
     AjouterComponent,
     EditProduiComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,7 @@ import { EditProduiComponent } from './edit-produi/edit-produi.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

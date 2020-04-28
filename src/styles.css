@@ -1,1 +1,187 @@
-/* You can add global styles to this file, and also import other style files */
+#wb_CssMenu1
+{
+   border: 0px solid #C0C0C0;
+   background-color: transparent;
+   margin: 0;
+   text-align: left;
+}
+#wb_CssMenu1 ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   display: inline-block;
+}
+#wb_CssMenu1 li
+{
+   float: left;
+   margin: 0;
+   padding: 3px 0px 3px 0px;
+   width: 130px;
+}
+#wb_CssMenu1 a
+{
+   display: block;
+   float: left;
+   color: #A9B7D1;
+   border-top-width: 0px;
+   border-right-width: 0px;
+   border-bottom-width: 5px;
+   border-left-width: 0px;
+   border-top-style: solid;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: solid;
+   border-top-color: #274C8B;
+   border-right-color: #274C8B;
+   border-bottom-color: #274C8B;
+   border-left-color: #274C8B;
+   background-color: #274C8B;
+   background-image: none;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   font-style: normal;
+   text-decoration: none;
+   width: 130px;
+   height: 50px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   line-height: 50px;
+   text-align: center;
+}
+
+#menuContexte:hover
+{
+   color: #000000;
+   background-color: #FFFFFF;
+   background-image: none;
+   border-top-width: 0px;
+   border-right-width: 0px;
+   border-bottom-width: 5px;
+   border-left-width: 0px;
+   border-top-style: solid;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: solid;
+   border-bottom-color: rgb(243,192,23);
+
+}
+
+#menuDocuments:hover
+{
+   color: #000000;
+   background-color: #FFFFFF;
+   background-image: none;
+   border-top-width: 0px;
+   border-right-width: 0px;
+   border-bottom-width: 5px;
+   border-left-width: 0px;
+   border-top-style: solid;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: solid;
+   border-bottom-color: rgb(70,194,182);
+
+}
+
+#menuRessources:hover
+{
+   color: #000000;
+   background-color: #FFFFFF;
+   background-image: none;
+   border-top-width: 0px;
+   border-right-width: 0px;
+   border-bottom-width: 5px;
+   border-left-width: 0px;
+   border-top-style: solid;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: solid;
+   border-bottom-color: rgb(255,176,125);
+
+}
+
+#menuPrealables:hover
+{
+   color: #000000;
+   background-color: #FFFFFF;
+   background-image: none;
+   border-top-width: 0px;
+   border-right-width: 0px;
+   border-bottom-width: 5px;
+   border-left-width: 0px;
+   border-top-style: solid;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: solid;
+   border-bottom-color: rgb(235,237,126);
+
+}
+
+#menuDeroulement:hover
+{
+   color: #000000;
+   background-color: #FFFFFF;
+   background-image: none;
+   border-top-width: 0px;
+   border-right-width: 0px;
+   border-bottom-width: 5px;
+   border-left-width: 0px;
+   border-top-style: solid;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: solid;
+   border-bottom-color: rgb(163,138,199);
+
+}
+
+#menuReleves:hover
+{
+   color: #000000;
+   background-color: #FFFFFF;
+   background-image: none;
+   border-top-width: 0px;
+   border-right-width: 0px;
+   border-bottom-width: 5px;
+   border-left-width: 0px;
+   border-top-style: solid;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: solid;
+   border-bottom-color: rgb(7,120,98);
+
+}
+
+#menuCloture:hover
+{
+   color: #000000;
+   background-color: #FFFFFF;
+   background-image: none;
+   border-top-width: 0px;
+   border-right-width: 0px;
+   border-bottom-width: 5px;
+   border-left-width: 0px;
+   border-top-style: solid;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: solid;
+   border-bottom-color: rgb(243,157,192);
+
+}
+#wb_CssMenu1 li.firstmain
+{
+   padding-left: 3px;
+}
+#wb_CssMenu1 li.lastmain
+{
+   padding-right: 3px;
+}
+#wb_CssMenu1 br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}

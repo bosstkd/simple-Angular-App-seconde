@@ -1,23 +1,38 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm navbar-dark" id="myNavBar">
   <!-- Brand -->
-  <a class="navbar-brand" routerLink="/">Logo</a>
+  <a class="navbar-brand" routerLink="/"><i class="fa fa-soundcloud"></i> GemHyGO</a>
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
   <!-- Links -->
-  <ul class="navbar-nav">
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav ml-auto" >
     <li class="nav-item">
-      <a class="nav-link" routerLink="/">Home</a>
+      <a class="nav-link" routerLink="/"><i class="fa fa-user"></i> Utilisateur</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/"><i class="fa fa-check-circle"></i> Maitrise activité</a>
     </li>
   
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Produits
+        <i class="fa fa-cogs"></i>
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" routerLink="/produits">Chercher</a>
-        <a class="dropdown-item" routerLink="/ajouter">Ajouter</a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" routerLink="/produits">Aperçu Gamme</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" routerLink="/ajouter">Admin.</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" routerLink="/ajouter">Cas d'usage</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" routerLink="/ajouter">A propos</a>
       </div>
     </li>
   </ul>
+ </div>
 </nav> 
 <router-outlet></router-outlet>
