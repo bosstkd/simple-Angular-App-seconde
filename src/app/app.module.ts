@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { EditProduiComponent } from './edit-produi/edit-produi.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SearchComponent } from './search/search.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SearchComponent } from './search/search.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

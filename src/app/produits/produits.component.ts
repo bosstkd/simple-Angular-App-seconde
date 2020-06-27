@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CatalogueService } from '../services/catalogue.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 @Component({
   selector: 'app-produits',
   templateUrl: './produits.component.html',
@@ -15,16 +17,18 @@ export class ProduitsComponent implements OnInit {
   motCleRecherche:string;
 
 
-  constructor(private cs:CatalogueService, private router:Router) { }
+  constructor(private cs:CatalogueService, private router:Router, private spinner:NgxSpinnerService) { }
 
   ngOnInit() {
   }
 
   onGetProducts(){
     this.motCleRecherche = "";
+    this.spinner.show();
     this.cs.findAllProduct(this.page, this.size).subscribe(data=>{
       this.pages = new Array<number>(data["page"].totalPages);
       this.prd=data;
+      this.spinner.hide();
     },err=>{
         console.log(err);
       })
