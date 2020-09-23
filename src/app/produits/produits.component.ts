@@ -34,6 +34,16 @@ export class ProduitsComponent implements OnInit {
       })
   }
 
+  jasper(){
+    console.log("Jasper Call");
+
+    this.cs.jasper().subscribe(data=>{
+      console.log(data);
+    }, err=>{
+      console.log(err);
+    })
+  }
+
   onPageProducts(idx){
     this.page = idx;
     if(this.motCleRecherche.length<1){

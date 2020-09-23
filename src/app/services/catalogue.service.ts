@@ -36,6 +36,10 @@ export class CatalogueService {
 
    majProduit(produit, id){
     return this.httpClient.put(this.host+"/prdUpdate/"+id, produit);
- }
+   }
+
+   jasper(){
+    return this.httpClient.get(this.host+"/jasper");
+   }
 
 }

@@ -18,6 +18,9 @@ type="ball-clip-rotate-multiple">
         <div class="card-header">Liste des produits</div>
         <div class="card-body">
           <button class="btn btn-primary" (click) = "onGetProducts()">Produits</button>
+          <button (click)="jasper()" class="btn btn-primary" style="position:relative; padding-right: 10px;">
+            Jasper
+          </button>
         </div>
         <div class="card-body">
           <form #f="ngForm" (ngSubmit)="onChercher(f.value)" class="form-inline">
@@ -28,6 +31,8 @@ type="ball-clip-rotate-multiple">
               Chercher
             </button>
           </form>
+          
+
           <table *ngIf="prd; else noPrd" class="table table-striped" >
             <thead>
             <tr>
